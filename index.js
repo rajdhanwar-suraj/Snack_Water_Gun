@@ -3,13 +3,16 @@ let playerScore = 0;
 let i = 0;
 while(i<3){
 let computer = Math.floor(Math.random()*3);
-console.log(computer);
+// console.log(computer);
 console.log("Wellcome to Snack-Water-Gun game.");
 console.log("1. Snack");
 console.log("2. Water");
 console.log("3. Gun");
-
-let player = prompt("Enter your Choice");
+var player = prompt("Enter your Choice");
+while(player<0 || player>3){
+var player = prompt("Please enter right Choice");
+  console.log(player);
+}
 if(player == 1 && computer ==0 ||player == 2 && computer ==1 ||player == 3 && computer ==2){
   console.log("Draw!!!");
 }else if(player == 1 && computer ==1 ||player == 2 && computer ==2 ||player == 3 && computer ==0){
